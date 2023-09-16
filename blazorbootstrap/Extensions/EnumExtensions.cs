@@ -23,7 +23,7 @@ public static class EnumExtensions
             BackgroundColor.Body => "bg-body text-dark",
             BackgroundColor.White => "bg-white text-dark",
             BackgroundColor.Transparent => "bg-transparent text-dark",
-            _ => ""
+            _ => string.Empty
         };
 
     /// <summary>
@@ -45,7 +45,7 @@ public static class EnumExtensions
             BackgroundColor.Body => "bg-body",
             BackgroundColor.White => "bg-white",
             BackgroundColor.Transparent => "bg-transparent",
-            _ => ""
+            _ => string.Empty
         };
 
     /// <summary>
@@ -91,7 +91,7 @@ public static class EnumExtensions
             ButtonType.Button => "button",
             ButtonType.Submit => "submit",
             ButtonType.Reset => "reset",
-            _ => null
+            _ => "button"
         };
 
     /// <summary>
@@ -106,7 +106,7 @@ public static class EnumExtensions
             CalloutType.Danger => "bb-callout-danger",
             CalloutType.Warning => "bb-callout-warning",
             CalloutType.Info => "bb-callout-info",
-            _ => ""
+            _ => string.Empty
         };
 
     /// <summary>
@@ -125,7 +125,7 @@ public static class EnumExtensions
             SpinnerColor.Info => "text-info",
             SpinnerColor.Light => "text-light",
             SpinnerColor.Dark => "text-dark",
-            _ => ""
+            _ => string.Empty
         };
 
     /// <summary>
@@ -140,7 +140,7 @@ public static class EnumExtensions
             Target.Parent => "_parent",
             Target.Top => "_top",
             Target.Self => "_self",
-            _ => null
+            _ => string.Empty
         };
 
     /// <summary>
