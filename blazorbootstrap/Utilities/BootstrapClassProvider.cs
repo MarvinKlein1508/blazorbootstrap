@@ -182,7 +182,7 @@ public class BootstrapClassProvider
             BlazorBootstrap.AlertColor.Info => "info",
             BlazorBootstrap.AlertColor.Light => "light",
             BlazorBootstrap.AlertColor.Dark => "dark",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToAlignment(Alignment alignment) =>
@@ -191,7 +191,7 @@ public class BootstrapClassProvider
             Alignment.Start => "start",
             Alignment.Center => "center",
             Alignment.End => "end",
-            _ => null
+            _ => string.Empty
         };
 
     public string Toast() => "toast";
@@ -202,7 +202,7 @@ public class BootstrapClassProvider
         {
             AutoCompleteSize.Large => "form-control-lg",
             AutoCompleteSize.Small => "form-control-sm",
-            _ => ""
+            _ => string.Empty
         };
 
     public string ToBackgroundColor(BackgroundColor color) =>
@@ -219,7 +219,7 @@ public class BootstrapClassProvider
             BlazorBootstrap.BackgroundColor.Body => "body",
             BlazorBootstrap.BackgroundColor.White => "white",
             BlazorBootstrap.BackgroundColor.Transparent => "transparent",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToBadgeColor(BadgeColor color) =>
@@ -233,7 +233,7 @@ public class BootstrapClassProvider
             BlazorBootstrap.BadgeColor.Info => "info",
             BlazorBootstrap.BadgeColor.Light => "light",
             BlazorBootstrap.BadgeColor.Dark => "dark",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToBadgeIndicator(BadgeIndicatorType indicatorType) =>
@@ -241,7 +241,7 @@ public class BootstrapClassProvider
         {
             BadgeIndicatorType.RoundedPill => "rounded-pill",
             BadgeIndicatorType.RoundedCircle => "rounded-circle",
-            _ => "" // default: Top right
+            _ => string.Empty // default: Top right
         };
 
     public string ToBadgePlacement(BadgePlacement badgePlacement) =>
@@ -271,7 +271,7 @@ public class BootstrapClassProvider
             BlazorBootstrap.ButtonColor.Light => "light",
             BlazorBootstrap.ButtonColor.Dark => "dark",
             BlazorBootstrap.ButtonColor.Link => "link",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToCalloutType(CalloutType type) =>
@@ -282,7 +282,7 @@ public class BootstrapClassProvider
             CalloutType.Warning => $"{Callout()}-warning",
             CalloutType.Info => $"{Callout()}-info",
             CalloutType.Tip => $"{Callout()}-success",
-            _ => ""
+            _ => string.Empty
         };
 
     public string ToCardColor(CardColor color) =>
@@ -296,7 +296,7 @@ public class BootstrapClassProvider
             CardColor.Info => "text-bg-info",
             CardColor.Light => "text-bg-light",
             CardColor.Dark => "text-bg-dark",
-            _ => ""
+            _ => string.Empty
         };
 
     public string ToColor(TextColor color) =>
@@ -310,10 +310,10 @@ public class BootstrapClassProvider
             BlazorBootstrap.TextColor.Info => "info",
             BlazorBootstrap.TextColor.Light => "light",
             BlazorBootstrap.TextColor.Dark => "dark",
-            _ => null
+            _ => string.Empty
         };
 
-    public string ToDialogSize(DialogSize size) =>
+    public string? ToDialogSize(DialogSize size) =>
         size switch
         {
             DialogSize.Regular => null,
@@ -330,7 +330,7 @@ public class BootstrapClassProvider
             BlazorBootstrap.DisplayHeadingSize.H2 => "2",
             BlazorBootstrap.DisplayHeadingSize.H3 => "3",
             BlazorBootstrap.DisplayHeadingSize.H4 => "4",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToDividerType(DividerType dividerType) =>
@@ -351,7 +351,7 @@ public class BootstrapClassProvider
             BlazorBootstrap.DropdownDirection.Dropup => "dropup",
             BlazorBootstrap.DropdownDirection.DropupCentered => "dropup dropup-center",
             BlazorBootstrap.DropdownDirection.Dropstart => "dropstart",
-            _ => ""
+            _ => string.Empty
         };
 
     public string ToDropdownMenuPosition(DropdownMenuPosition position) =>
@@ -359,7 +359,7 @@ public class BootstrapClassProvider
         {
             BlazorBootstrap.DropdownMenuPosition.Start => "dropdown-menu-start",
             BlazorBootstrap.DropdownMenuPosition.End => "dropdown-menu-end",
-            _ => ""
+            _ => string.Empty
         };
 
     public string ToHeadingSize(HeadingSize headingSize) =>
@@ -371,7 +371,7 @@ public class BootstrapClassProvider
             BlazorBootstrap.HeadingSize.H4 => "4",
             BlazorBootstrap.HeadingSize.H5 => "5",
             BlazorBootstrap.HeadingSize.H6 => "6",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToIconColor(IconColor color) =>
@@ -388,10 +388,10 @@ public class BootstrapClassProvider
             BlazorBootstrap.IconColor.Body => "body",
             BlazorBootstrap.IconColor.Muted => "muted",
             BlazorBootstrap.IconColor.White => "white",
-            _ => null
+            _ => string.Empty
         };
 
-    public string ToModalFullscreen(ModalFullscreen fullscreen) =>
+    public string? ToModalFullscreen(ModalFullscreen fullscreen) =>
         fullscreen switch
         {
             ModalFullscreen.Disabled => null,
@@ -404,7 +404,7 @@ public class BootstrapClassProvider
             _ => null
         };
 
-    public string ToModalHeaderBottomBorderColor(ModalType modalType) =>
+    public string? ToModalHeaderBottomBorderColor(ModalType modalType) =>
         modalType switch
         {
             ModalType.Primary => "border-primary",
@@ -418,7 +418,7 @@ public class BootstrapClassProvider
             _ => null
         };
 
-    public string ToModalSize(ModalSize size) =>
+    public string? ToModalSize(ModalSize size) =>
         size switch
         {
             ModalSize.Regular => null,
@@ -439,10 +439,10 @@ public class BootstrapClassProvider
             ModalType.Info => "info",
             ModalType.Light => "light",
             ModalType.Dark => "dark",
-            _ => null
+            _ => string.Empty
         };
 
-    public string ToOffcanvasSize(OffcanvasSize size) =>
+    public string? ToOffcanvasSize(OffcanvasSize size) =>
         size switch
         {
             OffcanvasSize.Regular => null,
@@ -470,7 +470,7 @@ public class BootstrapClassProvider
         {
             BlazorBootstrap.PaginationSize.Small => "sm",
             BlazorBootstrap.PaginationSize.Large => "lg",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToPlaceholderAnimation(PlaceholderAnimation animation) =>
@@ -478,7 +478,7 @@ public class BootstrapClassProvider
         {
             BlazorBootstrap.PlaceholderAnimation.Glow => "glow",
             BlazorBootstrap.PlaceholderAnimation.Wave => "wave",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToPlaceholderColor(PlaceholderColor color) =>
@@ -492,7 +492,7 @@ public class BootstrapClassProvider
             BlazorBootstrap.PlaceholderColor.Info => "info",
             BlazorBootstrap.PlaceholderColor.Light => "light",
             BlazorBootstrap.PlaceholderColor.Dark => "dark",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToPlaceholderSize(PlaceholderSize size) =>
@@ -501,7 +501,7 @@ public class BootstrapClassProvider
             BlazorBootstrap.PlaceholderSize.ExtraSmall => "xs",
             BlazorBootstrap.PlaceholderSize.Small => "sm",
             BlazorBootstrap.PlaceholderSize.Large => "lg",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToPlaceholderWidth(PlaceholderWidth width) =>
@@ -519,7 +519,7 @@ public class BootstrapClassProvider
             BlazorBootstrap.PlaceholderWidth.Col10 => "col-10",
             BlazorBootstrap.PlaceholderWidth.Col11 => "col-11",
             BlazorBootstrap.PlaceholderWidth.Col12 => "col-12",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToPlacement(Placement placement) =>
@@ -539,7 +539,7 @@ public class BootstrapClassProvider
             BlazorBootstrap.Position.Absolute => PositionAbsolute(),
             BlazorBootstrap.Position.Fixed => PositionFixed(),
             BlazorBootstrap.Position.Sticky => PositionSticky(),
-            _ => ""
+            _ => string.Empty
         };
 
     public string ToProgressColor(ProgressColor color) =>
@@ -552,7 +552,7 @@ public class BootstrapClassProvider
             ProgressColor.Warning => "warning",
             ProgressColor.Info => "info",
             ProgressColor.Dark => "dark",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToScreenreader(Screenreader screenreader) =>
@@ -560,7 +560,7 @@ public class BootstrapClassProvider
         {
             Screenreader.Only => "sr-only",
             Screenreader.OnlyFocusable => "sr-only-focusable",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToSize(Size size) =>
@@ -571,7 +571,7 @@ public class BootstrapClassProvider
             Size.Medium => "md",
             Size.Large => "lg",
             Size.ExtraLarge => "xl",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToTabColor(TabColor color) =>
@@ -585,7 +585,7 @@ public class BootstrapClassProvider
             TabColor.Info => "bg-info text-dark",
             TabColor.Light => "bg-light text-dark",
             TabColor.Dark => "bg-dark text-white",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToTextAlignment(Alignment alignment) =>
@@ -594,7 +594,7 @@ public class BootstrapClassProvider
             Alignment.Start or Alignment.None => "text-start",
             Alignment.Center => "text-center",
             Alignment.End => "text-end",
-            _ => ""
+            _ => string.Empty
         };
 
     public string ToTextColor(TextColor color) =>
@@ -611,7 +611,7 @@ public class BootstrapClassProvider
             BlazorBootstrap.TextColor.Body => "body",
             BlazorBootstrap.TextColor.Muted => "muted",
             BlazorBootstrap.TextColor.White => "white",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToToastBackgroundColor(ToastType toastType) =>
@@ -625,7 +625,7 @@ public class BootstrapClassProvider
             ToastType.Info => "info",
             ToastType.Light => "light",
             ToastType.Dark => "dark",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToToastsPlacement(ToastsPlacement toastsPlacement) =>
@@ -654,7 +654,7 @@ public class BootstrapClassProvider
             ToastType.Warning
                 or ToastType.Info
                 or ToastType.Light => "dark",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToTooltipColor(TooltipColor color) =>
@@ -668,7 +668,7 @@ public class BootstrapClassProvider
             BlazorBootstrap.TooltipColor.Info => "bb-tooltip-info",
             BlazorBootstrap.TooltipColor.Light => "bb-tooltip-light",
             BlazorBootstrap.TooltipColor.Dark => "bb-tooltip-dark",
-            _ => null
+            _ => string.Empty
         };
 
     public string ToTooltipPlacement(TooltipPlacement tooltipPlacement) =>
